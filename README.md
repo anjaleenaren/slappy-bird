@@ -1,5 +1,4 @@
 
-https://github.com/user-attachments/assets/17d4e253-ef41-4a07-893e-5ba1bf4493ae
 # 🐤 Slappy Bird
 
 A fun and challenging twist on the classic Flappy Bird game, where you not only navigate through pipes but also slap emoji faces to earn points! Built with React and TypeScript.
