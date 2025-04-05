@@ -1,51 +1,105 @@
-# Slappy Bird
+# 🐤 Slappy Bird
 
-A simple Flappy Bird clone built with Next.js and TypeScript.
+A fun and challenging twist on the classic Flappy Bird game, where you not only navigate through pipes but also slap emoji faces to earn points! Built with React and TypeScript.
 
-## Getting Started
+![Slappy Bird Game](./public/screenshot.png)
 
-First, install the dependencies:
+## 🎮 Game Features
 
+- **Classic Flappy Bird Mechanics**: Navigate through pipes by jumping
+- **Unique Slapping Mechanic**: Slap emoji faces to earn extra points
+- **Progressive Difficulty**: Game speed increases and pipe gaps narrow as your score rises
+- **High Score System**: Local storage-based high score tracking
+- **Responsive Design**: Playable on both desktop and mobile devices
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/slappy-bird.git
+cd slappy-bird
+```
+
+2. Install dependencies:
 ```bash
 npm install
+# or
+yarn install
 ```
 
-Then, run the development server:
-
+3. Start the development server:
 ```bash
 npm run dev
+# or
+yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to play the game.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to play!
 
-## How to Play
+## 🎯 How to Play
 
-- Press the **Space bar** or **Up Arrow** key to make the bird jump
-- Click/tap the screen to make the bird jump (mobile/touch devices)
-- Avoid hitting the pipes and the ground
-- Try to get through as many pipes as you can to increase your score
-- When game over, press Space or click/tap to restart
+### Controls
+- Press `Space` or `↑` to make the bird jump
+- Click/tap the game area to jump
+- The bird automatically moves forward
 
-## Technologies Used
+### Objectives
+- Navigate through the green pipes without hitting them
+- Slap the emoji faces (😮, 😯, etc.) to earn points
+- Try to beat your high score!
 
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- React Hooks
+### Game Mechanics
+- Your bird (🐤) turns into a fist (✊) when slapping faces
+- Game speed increases as your score goes up
+- Gaps between pipes get smaller at higher scores
+- Game ends if you hit pipes or touch the ground/ceiling
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technical Details
 
-## Learn More
+### Built With
+- [React](https://reactjs.org/) - Frontend framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety and better developer experience
+- [Tailwind CSS](https://tailwindcss.com/) - Styling and responsive design
 
-To learn more about Next.js, take a look at the following resources:
+### Key Features Implementation
+- **Game Loop**: RequestAnimationFrame for smooth animations
+- **Collision Detection**: Precise hitbox calculations for pipes and faces
+- **State Management**: React useState and useEffect for game state
+- **Local Storage**: Persistent high score tracking
+- **Responsive Design**: Playable on various screen sizes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Deploy on Vercel
+## 🙋‍♂️ Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Feel free to open issues and submit pull requests.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 🎨 Customization
+
+You can customize various game parameters in `src/components/Game.tsx`:
+
+```typescript
+const GRAVITY = 0.8;
+const JUMP_FORCE = -10;
+const INITIAL_PIPE_SPEED = 5;
+const INITIAL_PIPE_GAP = 150;
+const MIN_PIPE_GAP = 100;
+const BIRD_SIZE = 30;
+const PIPE_WIDTH = 60;
+const GAME_HEIGHT = 500;
+```
